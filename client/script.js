@@ -25,10 +25,10 @@ function typeText(element, text) {
 
     let interval = setInterval(() => {
         if (index < text.length) {
-            element.innerHTML += text.charAt(index)
-            index++
+            element.innerHTML += text.charAt(index);
+            index++;
         } else {
-            clearInterval(interval)
+            clearInterval(interval);
         }
     }, 20)
 }
@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://codex-im0y.onrender.com/', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
